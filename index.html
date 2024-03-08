@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="score-wrapper">
+        <div class="score-wrapper-part">
+          <p class="score-num score-ai">0</p>
+          <p class="score-opponent">AI</p>
+        </div>
+        <div class="score-wrapper-part">
+          <p class="score-num score-human">0</p>
+          <p class="score-opponent">YOU</p>
+        </div>
+      </div>
+      <div class="result-wrapper"><p class="result-text"></p></div>
+      <div class="choise-wrapper">
+        <button class="choise-btn rock" type="button">
+          <img
+            class="choise-btn-img rock-img"
+            src="./img/buttonRock.png"
+            alt="Rock button"
+            width="222"
+            height="222"
+          /></button
+        ><button class="choise-btn paper" type="button">
+          <img
+            class="choise-btn-img paper-img"
+            src="./img/buttonPaper.png"
+            alt="Paper button"
+            width="222"
+            height="222"
+          /></button
+        ><button class="choise-btn scissors" type="button">
+          <img
+            class="choise-btn-img scissors-img"
+            src="./img/buttonScissors.png"
+            alt="Scissors button"
+            width="222"
+            height="222"
+          />
+        </button>
+      </div>
+      <div class="restart-btn-wrapper">
+        <button class="next-round-btn" type="button">
+          <img
+            class="next-round-btn-img"
+            src="./img/buttonNextRound.png"
+            alt="Next round button"
+            width="204"
+          /></button
+        ><button class="restart-btn" type="button">
+          <img
+            class="restart-btn-img"
+            src="./img/buttonRestart.png"
+            alt="Restart button"
+            width="145"
+          />
+        </button>
+      </div>
+      <div class="ai-arm">
+        <img
+          class="arm-img ai-arm-img"
+          src="./img/AI-Arm-Idle.png"
+          alt="AI arm"
+          width="500"
+        />
+      </div>
+      <div class="human-arm">
+        <img
+          class="arm-img human-arm-img"
+          src="./img/Human-Arm-Idle.png"
+          alt="Human arm"
+          width="500"
+        />
+      </div>
+    </section>
+    <!-- <audio src="/Player-Select.mp3" class="song" controls autoplay loop></audio> -->
+
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
