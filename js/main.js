@@ -28,62 +28,62 @@ function onOptionBtnClick(e) {
   aiArmImg.style.transform = 'rotate(50deg)';
 
   if (e.target === rockImg && aiChoise === 'rock') {
-    humanArmImg.src = '/img/human-rock.png';
-    aiArmImg.src = '/img/ai-rock.png';
+    humanArmImg.src = './img/human-rock.png';
+    aiArmImg.src = './img/ai-rock.png';
     resultText.textContent = "IT'S A DRAW";
   }
 
   if (e.target === rockImg && aiChoise === 'paper') {
-    humanArmImg.src = '/img/human-rock.png';
-    aiArmImg.src = '/img/ai-paper.png';
+    humanArmImg.src = './img/human-rock.png';
+    aiArmImg.src = './img/ai-paper.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
   if (e.target === rockImg && aiChoise === 'scissors') {
-    humanArmImg.src = '/img/human-rock.png';
-    aiArmImg.src = '/img/ai-scissors.png';
+    humanArmImg.src = './img/human-rock.png';
+    aiArmImg.src = './img/ai-scissors.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
   if (e.target === paperImg && aiChoise === 'rock') {
-    humanArmImg.src = '/img/human-paper.png';
-    aiArmImg.src = '/img/ai-rock.png';
+    humanArmImg.src = './img/human-paper.png';
+    aiArmImg.src = './img/ai-rock.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
   if (e.target === paperImg && aiChoise === 'paper') {
-    humanArmImg.src = '/img/human-paper.png';
-    aiArmImg.src = '/img/ai-paper.png';
+    humanArmImg.src = './img/human-paper.png';
+    aiArmImg.src = './img/ai-paper.png';
     resultText.textContent = "IT'S A DRAW";
   }
 
   if (e.target === paperImg && aiChoise === 'scissors') {
-    humanArmImg.src = '/img/human-paper.png';
-    aiArmImg.src = '/img/ai-scissors.png';
+    humanArmImg.src = './img/human-paper.png';
+    aiArmImg.src = './img/ai-scissors.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
   if (e.target === scissorsImg && aiChoise === 'rock') {
-    humanArmImg.src = '/img/human-scissors.png';
-    aiArmImg.src = '/img/ai-rock.png';
+    humanArmImg.src = './img/human-scissors.png';
+    aiArmImg.src = './img/ai-rock.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
   if (e.target === scissorsImg && aiChoise === 'paper') {
-    humanArmImg.src = '/img/human-scissors.png';
-    aiArmImg.src = '/img/ai-paper.png';
+    humanArmImg.src = './img/human-scissors.png';
+    aiArmImg.src = './img/ai-paper.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
   if (e.target === scissorsImg && aiChoise === 'scissors') {
-    humanArmImg.src = '/img/human-scissors.png';
-    aiArmImg.src = '/img/ai-scissors.png';
+    humanArmImg.src = './img/human-scissors.png';
+    aiArmImg.src = './img/ai-scissors.png';
     resultText.textContent = "IT'S A DRAW";
   }
 
