@@ -5,13 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/rock-paper-scissors/",
     "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^5.1.4"
   },
   "dependencies": {
+    "glob": "^10.4.2",
+    "vite-plugin-full-reload": "^1.1.0",
+    "vite-plugin-html-inject": "^1.1.2",
     "modern-normalize": "^2.0.0"
   }
 }
