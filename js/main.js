@@ -13,75 +13,75 @@ const restartBtnWrapper = document.querySelector('.restart-btn-wrapper');
 
 const scoreAi = document.querySelector('.score-ai');
 const scoreHuman = document.querySelector('.score-human');
-const optionChoiseWrapper = document.querySelector('.choise-wrapper');
+const optionChoiceWrapper = document.querySelector('.choise-wrapper');
 const options = ['rock', 'paper', 'scissors'];
 let countAi = 0;
 let countHuman = 0;
 
-optionChoiseWrapper.addEventListener('click', onOptionBtnClick);
+optionChoiceWrapper.addEventListener('click', onOptionBtnClick);
 
 function onOptionBtnClick(e) {
   if (e.target.nodeName !== 'IMG') return;
-  const randomChoise = Math.floor(Math.random() * options.length);
-  const aiChoise = options[randomChoise];
+  const randomChoice = Math.floor(Math.random() * options.length);
+  const aiChoice = options[randomChoice];
   humanArmImg.style.transform = 'rotate(-50deg)';
   aiArmImg.style.transform = 'rotate(50deg)';
 
-  if (e.target === rockImg && aiChoise === 'rock') {
+  if (e.target === rockImg && aiChoice === 'rock') {
     humanArmImg.src = './img/human-rock.png';
     aiArmImg.src = './img/ai-rock.png';
     resultText.textContent = "IT'S A DRAW";
   }
 
-  if (e.target === rockImg && aiChoise === 'paper') {
+  if (e.target === rockImg && aiChoice === 'paper') {
     humanArmImg.src = './img/human-rock.png';
     aiArmImg.src = './img/ai-paper.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
-  if (e.target === rockImg && aiChoise === 'scissors') {
+  if (e.target === rockImg && aiChoice === 'scissors') {
     humanArmImg.src = './img/human-rock.png';
     aiArmImg.src = './img/ai-scissors.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
-  if (e.target === paperImg && aiChoise === 'rock') {
+  if (e.target === paperImg && aiChoice === 'rock') {
     humanArmImg.src = './img/human-paper.png';
     aiArmImg.src = './img/ai-rock.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
-  if (e.target === paperImg && aiChoise === 'paper') {
+  if (e.target === paperImg && aiChoice === 'paper') {
     humanArmImg.src = './img/human-paper.png';
     aiArmImg.src = './img/ai-paper.png';
     resultText.textContent = "IT'S A DRAW";
   }
 
-  if (e.target === paperImg && aiChoise === 'scissors') {
+  if (e.target === paperImg && aiChoice === 'scissors') {
     humanArmImg.src = './img/human-paper.png';
     aiArmImg.src = './img/ai-scissors.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
-  if (e.target === scissorsImg && aiChoise === 'rock') {
+  if (e.target === scissorsImg && aiChoice === 'rock') {
     humanArmImg.src = './img/human-scissors.png';
     aiArmImg.src = './img/ai-rock.png';
     countAi++;
     resultText.textContent = 'YOU LOOSE!';
   }
 
-  if (e.target === scissorsImg && aiChoise === 'paper') {
+  if (e.target === scissorsImg && aiChoice === 'paper') {
     humanArmImg.src = './img/human-scissors.png';
     aiArmImg.src = './img/ai-paper.png';
     countHuman++;
     resultText.textContent = 'YOU WIN!';
   }
 
-  if (e.target === scissorsImg && aiChoise === 'scissors') {
+  if (e.target === scissorsImg && aiChoice === 'scissors') {
     humanArmImg.src = './img/human-scissors.png';
     aiArmImg.src = './img/ai-scissors.png';
     resultText.textContent = "IT'S A DRAW";
@@ -89,7 +89,7 @@ function onOptionBtnClick(e) {
 
   scoreAi.textContent = countAi;
   scoreHuman.textContent = countHuman;
-  optionChoiseWrapper.style.display = 'none';
+  optionChoiceWrapper.style.display = 'none';
   restartBtnWrapper.style.display = 'flex';
 }
 
@@ -104,7 +104,7 @@ function onRestartBtnClick(e) {
   humanArmImg.src = './img/Human-Arm-Idle.png';
   aiArmImg.src = './img/AI-Arm-Idle.png';
   restartBtnWrapper.style.display = 'none';
-  optionChoiseWrapper.style.display = 'flex';
+  optionChoiceWrapper.style.display = 'flex';
   humanArmImg.style.transform = 'rotate(0deg)';
   aiArmImg.style.transform = 'rotate(0deg)';
 }
@@ -113,7 +113,7 @@ nextRoundBtn.addEventListener('click', onNextRoundBtnClick);
 
 function onNextRoundBtnClick(e) {
   restartBtnWrapper.style.display = 'none';
-  optionChoiseWrapper.style.display = 'flex';
+  optionChoiceWrapper.style.display = 'flex';
   humanArmImg.src = './img/Human-Arm-Idle.png';
   aiArmImg.src = './img/AI-Arm-Idle.png';
   resultText.textContent = '';
