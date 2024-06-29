@@ -13,7 +13,7 @@ const restartBtnWrapper = document.querySelector('.restart-btn-wrapper');
 
 const scoreAi = document.querySelector('.score-ai');
 const scoreHuman = document.querySelector('.score-human');
-const optionChoiceWrapper = document.querySelector('.choise-wrapper');
+const optionChoiceWrapper = document.querySelector('.choice-wrapper');
 const options = ['rock', 'paper', 'scissors'];
 let countAi = 0;
 let countHuman = 0;
