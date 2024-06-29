@@ -86,7 +86,7 @@ button {
   letter-spacing: -9.6px;
 }
 
-.choise-wrapper {
+.choice-wrapper {
   width: 728px;
   display: flex;
   gap: 31px;
@@ -95,15 +95,15 @@ button {
   z-index: 1;
 }
 
-.choise-btn {
+.choice-btn {
   background-color: transparent;
 }
 
-.choise-btn:hover {
+.choice-btn:hover {
   transform: scale(1.3);
 }
 
-.choise-btn-img {
+.choice-btn-img {
 }
 
 .ai-arm {
