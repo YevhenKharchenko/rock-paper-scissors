@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/rock-paper-scissors/commonHelpers.js"></script>
+    <link rel="stylesheet" crossorigin href="/rock-paper-scissors/assets/index-DDbLql29.css">
+  </head>
+  <body>
+    <section class="section">
+      <div class="score-wrapper">
+        <div class="score-wrapper-part">
+          <p class="score-num score-ai">0</p>
+          <p class="score-opponent">AI</p>
+        </div>
+        <div class="score-wrapper-part">
+          <p class="score-num score-human">0</p>
+          <p class="score-opponent">YOU</p>
+        </div>
+      </div>
+      <div class="result-wrapper"><p class="result-text"></p></div>
+      <div class="choice-wrapper">
+        <button class="choice-btn rock" type="button">
+          <img
+            class="choice-btn-img rock-img"
+            src="/rock-paper-scissors/assets/buttonRock-mbzZPUm3.png"
+            alt="Rock button"
+            width="222"
+            height="222"
+          /></button
+        ><button class="choice-btn paper" type="button">
+          <img
+            class="choice-btn-img paper-img"
+            src="/rock-paper-scissors/assets/buttonPaper-Bl7G6bfX.png"
+            alt="Paper button"
+            width="222"
+            height="222"
+          /></button
+        ><button class="choice-btn scissors" type="button">
+          <img
+            class="choice-btn-img scissors-img"
+            src="/rock-paper-scissors/assets/buttonScissors-BS4vI9Zr.png"
+            alt="Scissors button"
+            width="222"
+            height="222"
+          />
+        </button>
+      </div>
+      <div class="restart-btn-wrapper">
+        <button class="next-round-btn" type="button">
+          <img
+            class="next-round-btn-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAABHCAMAAABI8pnHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABOUExURUdwTEBAQO/v7xAQECAgIN/f37+/v////wAAAMLCws/Pz4CAgDAwMF9fX2BgYJCQkKCgoJ+fn3BwcK+vr1BQULCwsH9/f29vb4+Pj09PT82xyMkAAAABdFJOUwBA5thmAAAEb0lEQVRo3u2Y6ZqsJhCGD6sGENdu+9z/jQYUqgrGY2aeJJOkA79c2N6vFkp//BZa/0btR2xvC9W9TWtQ/x2owwUbVINqUA2qQTWoBtWgGlSDalAN6i9tat6939U7QRmWPuLXWygzh7ZquF3p3b+u/cx/JrY7KJ062fN2Pu/MF9bh67x+GxR3ab/sDopn9NM6RsTr4QvLjHHE8m1UQ9rucut+Q4nuw+XzC4vYQre/v8nCBn8ElbrFQOSQadTnmPrx2xJF2qy8z34Z/VSbg+x6P94IltKn3qRk00kiXbT+am1WxNsJ/Hn0MvRUHbdSOnisdxceu21MOmm7xW5rfuW8OruxcB014jY83bKqYbK4s2nMC3afSRTJVI8ku2L4XMSdLTjZcvq0Kn+UKhJicZCRmIC4FdhxyV5+DlMSRYVrC/Oc/jPl8aLK6NdQFldjyRlNzhc9g5mh25hhODpubC7Nt/TV8gHWyALfU/+YjEBZVL6WI0xzKFX/ahb3FQWxSFRFHu6aJt+yoBtaRfAhQ+HYUWt+NeGx66xQyD8MIpCj5I/cs/Sb3ILEefUn6LjdQh0xxMBU5hTSZenSG/YQIK3HSH3UUUuhWBqxZvklHJ2OnCQqH42HowCUEKXSycI/Qak7qCOGYCo9HtrpvIqC9XhtgYlA+e7i3ONpMMTJBGIFKz+QZCAz5mupwJQGqBWV4g5qOHpArLLjdsheYsl66BnO7H6ipwEtKGZ0kNfhMnN/tacBQrQjwQcbUaCnBNv7jkpxB3XG0NwX6SKbOxtnKPwKnU2A8B+Ls0g9e69hnxvuKQyQYAdNMo3B6xm8gKN0RIobqBRDHcm4FgVNEK+UrPuK4UK3Und6WkZKcC4gkWXdY/HaQUhpXBaluIMa00lgaQrMs4zW73YG91V9WfsWwVAfe6yryCOlBPUXjEa6USQxmLtHsJ6+SEwXUOzMpJhh4yz6QzSG819DfRyyelmLqIuia6xjjOyp16SCo3WP+mg/D4KzjkpxA4VFkSXfKaoYq3dzvC08lBrFXdWbqoZaaOms0JPJ7kkcwTwrhaqL2WuoBzgPmGoicSE378O1TnuQkNU3oVA3d1dvAvoEJGEs+KSDKbXCVLSiUTnPqMKM4Ey3MTVg0FkisS0TRV5iWfEhJx+hzgldFUnLB9tNYJOZBBpJuoIccZiOh62uMQ8pbqAmYstkqlN21xfF06MqMM4vroVwJ2/jssolaCqXmMRchHAvsXi0aGZNy9+tLidpaqqhbOEpL9KdY60qdd7DE6voAT+SD5UTEylcCdWrMIgqnok5b18YFGlEWaNcOUW5tTg376DAlM8w8wvy9+COj6knz7vdu/xFwlIFYc7FmL7Y/kZ/ag0JVuzQVW1BEhFnX+UJC1YOj+OY48qfifYZa4RnXn760n8/xctbdfWKdlJaG/6p/yU6NPWL1Qyp8YshZG7Or/fY/tA2qAbVoBpUg2pQDapBNagG1aAa1J+HeqfWoBpUg2pQ/2Oo2Po3aw2qQf2D7XeF7rvM3ZkfDQAAAABJRU5ErkJggg=="
+            alt="Next round button"
+            width="204"
+          /></button
+        ><button class="restart-btn" type="button">
+          <img
+            class="restart-btn-img"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJkAAABHCAMAAAAjthXXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAACxMAAAsTAQCanBgAAABOUExURUdwTL+/v0BAQGBgYCAgIN/f3xAQEP///wAAAMLCwu/v78/Pz5CQkICAgJ+fn6+vr1BQUDAwMHBwcKCgoG9vb19fX39/f09PT4+Pj7CwsCjTLnoAAAABdFJOUwBA5thmAAADTklEQVRo3u2a23LjIAyGy9EpGGMSJ5u+/4suBJCEncZNL3Y8O3CV2hZ8kn6EmOnH6YjjI40jk31+Dscanew3ZI+MdrJO1sk6WSfrZJ2sk3WyQ5NZP8FgzB6HjK2uCtKpN6e10/S+P2aa/A6Z0etrjHwLzfBkw94EOyejy042xeaGJc3Pl1DyYeLfA8truh0yXnjUYGv4Rlx4FT+jGFNmA3ZSvwAjgX6ezUITSPhEVuDyWFbzpazLREHXc0qEGZ2TVZxZnczNMg4uLqgnEeKDCOGCDDFK0WguyzjnX5F9EZo/5fc5RYOT/KYgmibt0matwJiresr7zOZrGljIq3y1unlFdi0fJfwSgSTNklmuIfDZUz1O+SttaibBJoNJL1ES9/q6EvrGaHlFJkFmw4ielFV5TfBcY+tAmB51KXMdlEUWU0Gnjtfh0B+PxfMZma0+Me/qT1sDFHF5hT1D0u/giiDZh720VA8vlCzMVRfVf75TacdNzeAKym/cFbpOUzUo1JDyKT3Z1oxs1NnUTy9NSkrdRHmOO2R8Xcs88dQNDlSE6o5s5pEptdJxKjIGH3tywoQS6qWRz0syINJ0HxZrMWPkFTkrRJ51aoqMGWPFCHzxNQ2W7NaU70mkYmI37jwnY9ulNda4KrxbUwCgfHMSnPY1LC0JZSuf8w7ZlQSqLoR+3ZxYHBzX6tpWOOA3JLM6SBLJbb6HcFofAM/JqE84i914yvhJCkXYNCaTk/jFbmAkS49Nvp9r8zkZ/Y5hMa+PZ5NPKZszHU96rEYKdutIzjiBzg7bzUtY5x0yqmFHJFRnl7NIZ6X/AgaGMdNY/SHKAsuVsZjibf9w3iGjbgugsUBZI8rAAQYICiug1KA5iKnWDhyft0dOMlLfk11OJGZYsPyqzMHffBwl6Im2nDc00BrzLTcyoxPz72Pmmq0Gp2CyMMgpk0hMe/49BIjmd2zUNLtVWhXgA8ydh2dX8xMynQ59JrF4pRrxmJjfygRqLH2HDksR9C0b5PZNXXX5PSXD2JFNGNSAEFNp+tj+3YneNVZ3p3VHGx+ophNnscMlb+HdyxbXbm9o/SbcyTpZJ+tknayTdbJOdliyg41O1sn+KdlBx4HJjv5/e53svyD7C+A2PzLbz6uKAAAAAElFTkSuQmCC"
+            alt="Restart button"
+            width="145"
+          />
+        </button>
+      </div>
+      <div class="ai-arm">
+        <img
+          class="arm-img ai-arm-img"
+          src="/rock-paper-scissors/assets/AI-Arm-Idle-B_26l1tg.png"
+          alt="AI arm"
+          width="500"
+        />
+      </div>
+      <div class="human-arm">
+        <img
+          class="arm-img human-arm-img"
+          src="/rock-paper-scissors/assets/Human-Arm-Idle-mdut7KDZ.png"
+          alt="Human arm"
+          width="500"
+        />
+      </div>
+    </section>
+
+  </body>
+</html>
